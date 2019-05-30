@@ -1,5 +1,5 @@
 import React from "react";
-import Song_list from "./Song_list";
+import SongList from "./SongList";
 import Song from "./Song";
 import "./App.css";
 
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <Song />
-      <Song_list />
+      <SongList />
     </div>
   );
 };
