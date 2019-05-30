@@ -1,7 +1,7 @@
+import "./App.css";
 import React from "react";
 import SongList from "./SongList";
 import Song from "./Song";
-import "./App.css";
 
 const App = () => {
   return (
