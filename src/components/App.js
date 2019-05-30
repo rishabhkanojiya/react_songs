@@ -6,8 +6,14 @@ import Song from "./Song";
 const App = () => {
   return (
     <div>
-      <Song />
-      <SongList />
+      <div className="row">
+        <div className="col-lg-5">
+          <SongList />
+        </div>
+        <div className="col-lg-7">
+          <Song />
+        </div>
+      </div>
     </div>
   );
 };

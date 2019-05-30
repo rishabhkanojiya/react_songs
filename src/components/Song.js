@@ -1,11 +1,31 @@
 import React from "react";
 
-const Song = () => {
-  return (
-    <div>
-      <h1>individual</h1>
-    </div>
-  );
+import { connect } from "react-redux";
+
+const Song = ({ song }) => {
+  console.log(song);
+  if (song) {
+    return (
+      <div>
+        <div className="card border-primary">
+          <div className="card-header" />
+          <div className="card-body">
+            <h4 className="card-title">{song.title}</h4>
+            <p className="card-text">{song.duration}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return <div>Select any song</div>;
 };
 
-export default Song;
+const mapStateToProps = state => {
+  return {
+    song: state.selectedSong
+  };
+
+  // here selectedSOng os form combineReducers from reducer
+};
+
+export default connect(mapStateToProps)(Song);
